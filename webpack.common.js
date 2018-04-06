@@ -1,3 +1,7 @@
+const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     entry: './index.js',
   
@@ -13,12 +17,12 @@ module.exports = {
     //   contentBase: './',
     // },
 
-    // plugins: [
-    //   new CleanWebpackPlugin(['build']),
-    //   new HtmlWebpackPlugin({
-    //     title: 'Production'
-    //   })
-    // ],
+    plugins: [
+      new CleanWebpackPlugin(['build']),
+      new HtmlWebpackPlugin({
+        title: 'Production'
+      })
+    ],
 
     module: {
       loaders: [
