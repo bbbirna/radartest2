@@ -44,10 +44,7 @@ class App extends Component {
       console.log('The service worker has been registered ', registration);
     });
 
-      // return firebase.database().ref('/users/' + 22).once('value').then(function(snapshot) {
-      //   var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-      //   console.log("blabla" + username)
-      // });
+
   }
 
 
@@ -60,11 +57,14 @@ class App extends Component {
         <Maps 
           lat = {this.state.lat}
           lng = {this.state.lng}
-          isMarkerShown
+
           googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTcaCpwGdxHbSxX6fxzy_bzqqy6mVK31Q&v=3"
+
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `400px` }} />}
-          mapElement={<div style={{ height: `100%` }} />} />
+          mapElement={<div style={{ height: `100%` }} />} 
+          isMarkerShown
+          />
         }
         <button onClick={()=>auth.fbLogin()}>Login with facebook</button>
         <button onClick={() =>auth.logOut()}>Log out</button>
