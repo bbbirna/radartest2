@@ -7,11 +7,18 @@ module.exports = {
       publicPath: '/build/'
     },
     
-    devtool: "#eval-source-map",
-    devServer:{
-      historyApiFallback: true,
-      contentBase: './',
-    },
+    // devtool: "#eval-source-map",
+    // devServer:{
+    //   historyApiFallback: true,
+    //   contentBase: './',
+    // },
+
+    // plugins: [
+    //   new CleanWebpackPlugin(['build']),
+    //   new HtmlWebpackPlugin({
+    //     title: 'Production'
+    //   })
+    // ],
 
     module: {
       loaders: [
@@ -27,5 +34,5 @@ module.exports = {
         }
       ]
     }
-  }
+}
   
